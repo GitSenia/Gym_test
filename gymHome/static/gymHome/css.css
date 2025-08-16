@@ -1,0 +1,89 @@
+/* ===== Базовые стили ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    background: #f8f8f8;
+    color: #333;
+}
+
+/* ===== Шапка ===== */
+header {
+    background: linear-gradient(135deg, #222, #444);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 2.2rem;
+}
+
+/* ===== Навигация ===== */
+nav {
+    background: #ff6600;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px 10px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #222;
+}
+
+/* ===== Секции ===== */
+.section {
+    background: white;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.section h2 {
+    color: #ff6600;
+    margin-bottom: 15px;
+}
+
+/* ===== Списки ===== */
+.section ul {
+    list-style: none;
+}
+
+.section li {
+    padding-left: 25px;
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.section li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #ff6600;
+}
+
+/* ===== Адаптив ===== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    nav {
+        gap: 15px;
+    }
+}

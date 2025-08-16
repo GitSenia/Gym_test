@@ -1,0 +1,56 @@
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+        }
+        header {
+            background: #222;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            background: #444;
+            display: flex;
+            justify-content: center;
+        }
+        nav a {
+            color: white;
+            padding: 15px 20px;
+            text-decoration: none;
+            display: block;
+        }
+        nav a:hover {
+            background: #666;
+        }
+        .content {
+            padding: 30px;
+        }
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .card h3 {
+            margin-top: 0;
+            color: #222;
+        }
+        .card p {
+            color: #555;
+        }
+        .price {
+            font-weight: bold;
+            margin-top: 10px;
+            color: #008000;
+        }
