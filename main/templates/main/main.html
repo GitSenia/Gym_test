@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Фитнес клуб</title>
+  <style>
+    /* === Стили общего вида === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      background: #f8f9fa;
+      color: #333;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* === Навигация === */
+    header {
+      background: #111;
+      color: #fff;
+      padding: 15px 50px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #f8d210;
+    }
+
+    .nav-center {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+    }
+
+    .nav-center li a {
+      color: #fff;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-center li a:hover {
+      color: #f8d210;
+    }
+
+    .login-btn a {
+      padding: 8px 16px;
+      background: #f8d210;
+      color: #111;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .login-btn a:hover {
+      background: #ffd500;
+    }
+
+    /* === Hero секция === */
+    .hero {
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1599058917765-a78037f7f6e8?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      position: relative;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.6);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      padding: 12px 25px;
+      background: #f8d210;
+      color: #111;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #ffd500;
+    }
+
+    /* === Секции === */
+    section {
+      padding: 80px 10%;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 40px;
+      color: #111;
+    }
+
+    .services, .trainers, .machines {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      text-align: center;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    /* === Футер === */
+    footer {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Навигация -->
+  <header>
+    <div class="navbar">
+      <div class="logo">🏋️‍♂️ Fitness Club</div>
+      <ul class="nav-center">
+        <li><a href="#">Главная</a></li>
+        <li><a href="#about">О нас</a></li>
+        <li><a href="#services">Услуги</a></li>
+        <li><a href="#trainers">Тренеры</a></li>
+        <li><a href="#machines">Тренажёры</a></li>
+        <li><a href="#clubs">Другие клубы</a></li>
+      </ul>
+      <div class="login-btn">
+        <a href="/login/">Войти</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Добро пожаловать в наш фитнес клуб</h1>
+      <p>Твое тело — твой лучший проект. Начни тренироваться уже сегодня!</p>
+      <a href="#services" class="btn">Записаться</a>
+    </div>
+  </section>
+
+  <!-- О нас -->
+  <section id="about">
+    <h2>О нас</h2>
+    <p style="text-align:center; max-width:800px; margin:auto;">
+      Мы — современный спортивный клуб с профессиональными тренерами, новыми тренажёрами и атмосферой, которая мотивирует достигать целей.
+    </p>
+  </section>
+
+  <!-- Услуги -->
+  <section id="services">
+    <h2>Наши услуги</h2>
+    <div class="services">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1594737625785-c0f49fef6a68?auto=format&fit=crop&w=800&q=80" alt="">
+        <h3>Персональные тренировки</h3>
+        <p>Индивидуальный подход и план тренировок.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1584467735815-f778f274fb1d?auto=format&fit=crop&w=800&q=80" alt="">
+        <h3>Групповые занятия</h3>
+        <p>Йога, пилатес, кроссфит и многое другое.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=800&q=80" alt="">
+        <h3>Кардиозона</h3>
+        <p>Современные беговые дорожки, эллипсоиды и велотренажёры.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Тренеры -->
+  <section id="trainers">
+    <h2>Наши тренеры</h2>
+    <div class="trainers">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1598971639058-229042f9343d?auto=format&fit=crop&w=800&q=80" alt="">
+        <h3>Иван Иванов</h3>
+        <p>Силовые тренировки</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1594737625785-c0f49fef6a68?auto=format&fit=crop&w=800&q=80" alt="">
+        <h3>Анна Смирнова</h3>
+        <p>Йога и пилатес</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1584467735815-f778f274fb1d?auto=format&fit=crop&w=800&q=80" alt="">
+        <h3>Сергей Кузнецов</h3>
+        <p>Кроссфит и функционал</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Тренажёры -->
+  <section id="machines">
+    <h2>Наши тренажёры</h2>
+    <div class="machines">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1584467735815-f778f274fb1d?auto=format&fit=crop&w=800&q=80" alt="">
+        <h3>Силовые тренажёры</h3>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=800&q=80" alt="">
+        <h3>Кардиозона</h3>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=800&q=80" alt="">
+        <h3>Функциональный зал</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Другие клубы -->
+  <section id="clubs">
+    <h2>Наши клубы</h2>
+    <p style="text-align:center; max-width:800px; margin:auto;">
+      Выберите удобный для вас зал: Центр, Север, Юг, Восток или Запад города.
+    </p>
+  </section>
+
+  <!-- Футер -->
+  <footer>
+    <p>© 2025 Fitness Club | Все права защищены</p>
+  </footer>
+
+</body>
+</html>
