@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Наши тренеры | Fitness Club</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
+    body { background: #f8f9fa; color: #333; line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+
+    /* === Шапка === */
+    header { background: #111; color: #fff; padding: 15px 50px; position: sticky; top: 0; z-index: 1000; }
+    .navbar { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 22px; font-weight: bold; color: #f8d210; }
+    .nav-center { display: flex; gap: 25px; list-style: none; }
+    .nav-center li a { color: #fff; font-weight: 500; transition: color 0.3s; }
+    .nav-center li a:hover { color: #f8d210; }
+    .login-btn a { padding: 8px 16px; background: #f8d210; color: #111; font-weight: bold; border-radius: 5px; transition: 0.3s; }
+    .login-btn a:hover { background: #ffd500; }
+
+    /* === Заголовок === */
+    .page-header { height: 300px; background: url('https://images.unsplash.com/photo-1579758629938-03607ccdbaba?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; position: relative; display: flex; align-items: center; justify-content: center; }
+    .page-header::after { content: ''; position: absolute; top:0;left:0;right:0;bottom:0; background: rgba(0,0,0,0.6); }
+    .page-header h1 { position: relative; z-index: 2; color: #fff; font-size: 40px; }
+
+    /* === Карточки тренеров === */
+    section { padding: 80px 10%; }
+    .trainers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
+    .card { background: #fff; border-radius: 10px; padding: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s; }
+    .card:hover { transform: translateY(-5px); }
+    .card img { width: 100%; border-radius: 10px; margin-bottom: 15px; }
+    .card h3 { margin-bottom: 10px; }
+    .card p { margin-bottom: 15px; }
+    .btn { display: inline-block; padding: 10px 20px; background: #f8d210; color: #111; font-weight: bold; border-radius: 5px; transition: 0.3s; }
+    .btn:hover { background: #ffd500; }
+
+    /* === Футер === */
+    footer { background: #111; color: #fff; text-align: center; padding: 20px; margin-top: 50px; }
+  </style>
+</head>
+<body>
+
+  <!-- Навигация -->
+  <header>
+    <div class="navbar">
+      <div class="logo">🏋️‍♂️ Fitness Club</div>
+      <ul class="nav-center">
+        <li><a href="/">Главная</a></li>
+        <li><a href="/#about">О нас</a></li>
+        <li><a href="/#services">Услуги</a></li>
+        <li><a href="/trainers">Тренеры</a></li>
+        <li><a href="/#machines">Тренажёры</a></li>
+        <li><a href="/#clubs">Другие клубы</a></li>
+      </ul>
+      <div class="login-btn">
+        <a href="/login/">Войти</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Заголовок страницы -->
+  <div class="page-header">
+    <h1>Наши тренеры</h1>
+  </div>
+
+  <!-- Секция с тренерами -->
+  <section>
+    <div class="trainers-grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1594737625785-c0f49fef6a68?auto=format&fit=crop&w=800&q=80" alt="Тренер">
+        <h3>Иван Иванов</h3>
+        <p>Силовые тренировки и бодибилдинг</p>
+        <a href="/booking/trainer/1/" class="btn">Записаться</a>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1598971639058-229042f9343d?auto=format&fit=crop&w=800&q=80" alt="Тренер">
+        <h3>Анна Смирнова</h3>
+        <p>Йога и пилатес</p>
+        <a href="/booking/trainer/2/" class="btn">Записаться</a>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1584467735815-f778f274fb1d?auto=format&fit=crop&w=800&q=80" alt="Тренер">
+        <h3>Сергей Кузнецов</h3>
+        <p>Кроссфит и функциональные тренировки</p>
+        <a href="/booking/trainer/3/" class="btn">Записаться</a>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=800&q=80" alt="Тренер">
+        <h3>Мария Петрова</h3>
+        <p>Кардиотренировки и похудение</p>
+        <a href="/booking/trainer/4/" class="btn">Записаться</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer>
+    <p>© 2025 Fitness Club | Все права защищены</p>
+  </footer>
+
+</body>
+</html>
