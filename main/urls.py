@@ -7,4 +7,6 @@ urlpatterns = [
 
     path('', views.main, name='index'),
 
+    path('equipment', views.equipment, name='machines'),
+
 ]

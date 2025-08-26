@@ -1,1 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+{% load static %}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitness Club | Главная</title>
+  <link rel="stylesheet" href="{% static 'main/css/Style.css'%}">
+</head>
+<body>
+
+  <!-- Шапка -->
+  <header>
+    <div class="navbar">
+      <div class="logo">🏋️‍♂️ Fitness Club</div>
+      <ul class="nav-center">
+        <li><a href="{% url "index" %}">Главная</a></li>
+        <li><a href="{% url "index" %}">О нас</a></li>
+        <li><a href="{% url "servis" %}">Услуги</a></li>
+        <li><a href="{% url "machines" %}">Тренажёры</a></li>
+      </ul>
+      <div class="nav-right">
+        <div class="dropdown">
+          <button class="dropbtn">Другие клубы ▾</button>
+          <div class="dropdown-content">
+            <a href="#">Клуб №1</a>
+            <a href="#">Клуб №2</a>
+            <a href="#">Клуб №3</a>
+          </div>
+        </div>
+        <a href="/login" class="login-btn">Войти</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Главный баннер -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Добро пожаловать в Fitness Club</h1>
+      <p>Здоровье, сила и энергия в каждом дне!</p>
+      <a href="#services" class="btn">Наши услуги</a>
+    </div>
+  </section>
+
+  <!-- Блок "О нас" -->
+  <section id="about" class="about">
+    <h2>О нас</h2>
+    <p>Наш спортивный клуб — это современное пространство для тренировок, где каждый найдет что-то для себя.
+       У нас работают профессиональные тренеры, широкий выбор тренажёров и комфортные условия для занятий спортом.</p>
+  </section>
+
+
+  <!-- Футер -->
+  <footer>
+    <p>© 2025 Fitness Club | Все права защищены</p>
+  </footer>
+
+</body>
+</html>
 
