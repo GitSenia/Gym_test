@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Наши тренажёры | Fitness Club</title>
-  <link rel="stylesheet" href="{% static 'main/css/Style.css'%}">
+  <link rel="stylesheet" href="{% static 'main/css/EqStyle.css'%}">
 </head>
 <body>
 
@@ -34,38 +34,22 @@
   </header>
 
   <!-- Контент -->
-  <section class="machines-page">
-    <h2>Наши тренажёры</h2>
-    <p class="subtitle">В нашем спортзале установлены современные тренажёры для любых целей: от набора массы до кардио-тренировок.</p>
-
-    <div class="machines-grid">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80" alt="Беговая дорожка">
-        <h3>Беговая дорожка</h3>
-        <p>Идеальна для кардио, развития выносливости и сжигания калорий.</p>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=800&q=80" alt="Велотренажёр">
-        <h3>Велотренажёр</h3>
-        <p>Отличная альтернатива бегу, помогает укрепить сердечно-сосудистую систему.</p>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=800&q=80" alt="Силовые тренажёры">
-        <h3>Силовые тренажёры</h3>
-        <p>Подходят для развития силы, проработки всех групп мышц.</p>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1605296867724-46d5465a13f1?auto=format&fit=crop&w=800&q=80" alt="Эллиптический тренажёр">
-        <h3>Эллиптический тренажёр</h3>
-        <p>Щадящая нагрузка на суставы и эффективная тренировка всего тела.</p>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1607962837353-cc8c2ff76b60?auto=format&fit=crop&w=800&q=80" alt="Гантели и свободные веса">
-        <h3>Свободные веса</h3>
-        <p>Гантели, штанги и другое оборудование для функциональных тренировок.</p>
+<section>
+  <div class="machines-grid">
+    {% for machine in machines %}
+    <div class="machine-card">
+      <img src="{{ machine.image.url }}" alt="{{ machine.name }}" class="trainer-img">
+      <div class="machine-content">
+        <h3>{{ machine.name }}</h3>
+        <span class="category">{{ machine.category }}</span>
+        <p>{{machine.description|truncatechars:25}}</p>
+        <p class="manufacturer">Производитель: {{ machine.manufacturer }}</p>
+        <a href="{% url "machin" machine.id %}" class="btn">Подробнее</a>
       </div>
     </div>
-  </section>
+    {% endfor %}
+  </div>
+</section>
 
   <!-- Футер -->
   <footer>

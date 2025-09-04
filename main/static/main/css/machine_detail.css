@@ -1,0 +1,145 @@
+/* ======= Общие стили ======= */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: #111;
+  color: #fff;
+  line-height: 1.6;
+}
+
+a { text-decoration: none; }
+
+/* ======= Шапка ======= */
+header {
+  background: #111;
+  color: #fff;
+  padding: 15px 50px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 2px solid #f8d210;
+}
+
+.navbar { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 22px; font-weight: bold; color: #f8d210; }
+.nav-center { display: flex; gap: 25px; list-style: none; }
+.nav-center li a { color: #fff; transition: 0.3s; }
+.nav-center li a:hover { color: #f8d210; }
+.login-btn a {
+  padding: 8px 16px;
+  background: #f8d210;
+  color: #111;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.login-btn a:hover { background: #ffd500; }
+
+/* ======= Контейнер карточки ======= */
+.machine-detail {
+  padding: 60px 10%;
+}
+
+.machine-container {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+/* Фото тренажёра */
+.image-block {
+  flex: 1 1 400px;
+}
+.image-block img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+}
+
+/* Информация */
+.info-block {
+  flex: 1 1 400px;
+}
+
+.info-block h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #f8d210;
+}
+
+.category {
+  display: inline-block;
+  font-size: 14px;
+  background: #f8d210;
+  color: #111;
+  padding: 4px 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.description {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #ddd;
+}
+
+.manufacturer {
+  margin-bottom: 25px;
+  font-size: 15px;
+  font-style: italic;
+  color: #bbb;
+}
+
+/* Кнопки */
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+  margin-right: 10px;
+}
+
+.back-btn {
+  background: transparent;
+  border: 2px solid #f8d210;
+  color: #f8d210;
+}
+.back-btn:hover {
+  background: #f8d210;
+  color: #111;
+}
+
+.buy-btn {
+  background: #f8d210;
+  color: #111;
+}
+.buy-btn:hover {
+  background: #ffd500;
+}
+
+/* Мышцы */
+.muscles-block {
+  text-align: center;
+}
+.muscles-block h2 {
+  margin-bottom: 20px;
+  font-size: 26px;
+  color: #f8d210;
+}
+.muscles-block img {
+  max-width: 600px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+}
+
+/* ======= Футер ======= */
+footer {
+  background: #000;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  border-top: 2px solid #f8d210;
+}

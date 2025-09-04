@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+{% load static %}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ machine.name }} | Fitness Club</title>
+  <link rel="stylesheet" href="{% static 'main/css/machine_detail.css' %}">
+</head>
+<body>
+
+  <!-- Шапка -->
+  <header>
+    <div class="navbar">
+      <div class="logo">🏋️‍♂️ Fitness Club</div>
+      <ul class="nav-center">
+        <li><a href="/">Главная</a></li>
+        <li><a href="/services">Услуги</a></li>
+        <li><a href="/trainers">Тренеры</a></li>
+        <li><a href="/machines">Тренажёры</a></li>
+        <li><a href="/#clubs">Другие клубы</a></li>
+      </ul>
+      <div class="login-btn">
+        <a href="/login/">Войти</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Карточка -->
+  <section class="machine-detail">
+    <div class="machine-container">
+
+      <!-- Фото тренажёра -->
+      <div class="image-block">
+        <img src="{{ machine.image.url }}" alt="{{ machine.name }}">
+      </div>
+
+      <!-- Описание -->
+      <div class="info-block">
+        <h1>{{ machine.name }}</h1>
+        <span class="category">{{ machine.category }}</span>
+        <p class="description">{{ machine.description }}</p>
+        <p class="manufacturer">Производитель: <strong>{{ machine.manufacturer }}</strong></p>
+
+        <a href="{% url "machines" %}" class="btn back-btn">← Назад</a>
+        <a href="#" class="btn buy-btn">Добавить в избранное</a>
+      </div>
+    </div>
+
+    <!-- Фото мышц -->
+    <div class="muscles-block">
+      <h2>Работающие мышцы</h2>
+
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer>
+    <p>© 2025 Fitness Club | Все права защищены</p>
+  </footer>
+
+</body>
+</html>

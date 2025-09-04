@@ -39,8 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.admin',
 
     'main',
-    'services',
     'accounts',
+    'trainers'
 
 
 
