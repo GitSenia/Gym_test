@@ -40,7 +40,8 @@ INSTALLED_APPS = [
 
     'main',
     'accounts',
-    'trainers'
+    'trainers',
+    'subscription',
 
 
 

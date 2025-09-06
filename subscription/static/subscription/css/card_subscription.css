@@ -1,0 +1,76 @@
+
+.subscription-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 320px;
+  margin: 15px auto;
+  transition: transform 0.3s ease;
+}
+
+.subscription-card:hover {
+  transform: translateY(-5px);
+}
+
+/* 🔴 Красная шапка */
+.subscription-header {
+  background: #d62828; /* насыщенный красный */
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+}
+
+.subscription-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.subscription-shift {
+  font-size: 14px;
+  opacity: 0.7;
+  margin: 0;
+}
+
+/* ⚪ Основная часть */
+.subscription-body {
+  background: #fff;
+  padding: 15px;
+  text-align: center;
+}
+
+.subscription-desc {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 10px 0;
+}
+
+.subscription-price {
+  font-size: 22px;
+  font-weight: bold;
+  color: #111;
+  margin-bottom: 12px;
+}
+
+.btn {
+  display: inline-block;
+  background: #f8d210;
+  color: #111;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #ffd500;
+}

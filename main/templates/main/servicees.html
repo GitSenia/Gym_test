@@ -2,33 +2,33 @@
 <html lang="ru">
 {% load static %}
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Наши услуги | Fitness Club</title>
-    <link rel="stylesheet" href="{% static 'main/css/servises_style.css'%}">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наши услуги | Fitness Club</title>
+    <link rel="stylesheet" href="{% static 'main/css/servises_style.css' %}">
 </head>
 <body>
-
-  <!-- Навигация -->
-  <header>
+<!-- Навигация -->
+<header>
     <div class="navbar">
-      <div class="logo">🏋️‍♂️ Fitness Club</div>
-      <ul class="nav-center">
-        <li><a href="{% url "index" %}">Главная</a></li>
-        <li><a href="{% url "index" %}">О нас</a></li>
-        <li><a href="{% url "servis" %}">Услуги</a></li>
-        <li><a href="{% url "machines" %}">Тренажёры</a></li>
-      </ul>
-      <div class="login-btn">
-        <a href="/login/">Войти</a>
-      </div>
+        <div class="logo">🏋️‍♂️ Fitness Club</div>
+        <ul class="nav-center">
+            <li><a href="{% url "index" %}">Главная</a></li>
+            <li><a href="{% url "index" %}">О нас</a></li>
+            <li><a href="{% url "servis" %}">Услуги</a></li>
+            <li><a href="{% url "machines" %}">Тренажёры</a></li>
+        </ul>
+        <div class="login-btn">
+            <a href="/login/">Войти</a>
+        </div>
     </div>
-  </header>
+</header>
 
-  <!-- Заголовок страницы -->
-  <div class="page-header">
+<!-- Заголовок страницы -->
+<div class="page-header">
     <h1>Наши услуги</h1>
-  </div>
+</div>
 
 <section>
     <div class="services-grid">
@@ -44,10 +44,10 @@
 </section>
 
 
-  <!-- Футер -->
-  <footer>
+<!-- Футер -->
+<footer>
     <p>© 2025 Fitness Club | Все права защищены</p>
-  </footer>
+</footer>
 
 </body>
 </html>

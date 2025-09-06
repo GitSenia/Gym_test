@@ -22,6 +22,8 @@ urlpatterns = [
 
     path('', include('main.urls')),
 
+    path('', include('subscription.urls')),
+
     path('admin/', admin.site.urls),
 
 

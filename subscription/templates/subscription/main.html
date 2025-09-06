@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+{% load static %}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Абонементы | Fitness Club</title>
+  <link rel="stylesheet" href="{% static 'subscription/css/m.css' %}">
+</head>
+<body>
+
+<!-- Шапка -->
+  <header>
+    <div class="navbar">
+      <div class="logo">🏋️‍♂️ Fitness Club</div>
+      <ul class="nav-center">
+        <li><a href="{% url "index" %}">Главная</a></li>
+        <li><a href="{% url "index" %}">О нас</a></li>
+        <li><a href="{% url "servis" %}">Услуги</a></li>
+        <li><a href="{% url "machines" %}">Тренажёры</a></li>
+      </ul>
+      <div class="login-btn">
+        <a href="/login/">Войти</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Заголовок страницы -->
+  <section class="page-header">
+    <h1>Выберите ваш абонемент</h1>
+    <p class="subtitle">Гибкие тарифы для тренировок в любое время и на любых тренажёрах</p>
+  </section>
+
+  <!-- Карточки абонементов -->
+<section class="subscriptions">
+  <div class="subscriptions-grid">
+    {% for subscription in subscriptions %}
+      <div class="sub-card">
+        <h2>{{ subscription.name }}</h2>
+        <p class="term">{{ subscription.change }}</p>
+        <p class="desc">{{ subscription.description }}</p>
+        <p class="price">{{ subscription.price }} ₽</p>
+        <a href="#" class="btn">Купить</a>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+
+  <!-- Футер -->
+  <footer>
+    <p>© 2025 Fitness Club | Все права защищены</p>
+  </footer>
+
+</body>
+</html>
